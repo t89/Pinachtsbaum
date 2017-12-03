@@ -50,6 +50,11 @@ For a little demo execute the xmas.py file:
 python xmas.py
 ```
 
+(You may have to run this as root for GPIO access):
+```
+sudo python xmas.py
+```
+
 Edit with your favourite editor:
 ```
 vim xmas.py

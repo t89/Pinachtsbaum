@@ -5,6 +5,20 @@ Get the most out of your [3D Xmas Tree](https://thepihut.com/products/3d-xmas-tr
 ![3D Xmas Tree](https://cdn.shopify.com/s/files/1/0176/3274/products/IMG_0673_1024x1024.JPG?v=1510937356 "Xmas Trees")
 
 
+## Features:
+* Easy, transparent & automatic installation process
+* Mappings: Access each LED by the pcb-number, bei height, quarter & side
+* Simple On / Off
+* Illuminate with delay, auto-off
+* Dim over time, dim from any value to any value, auto-reversable
+* Ping a random LED, fill tree in random order
+* Blinking: Interval, Speed
+* Swirl: Speed, chain length
+* Key press listener
+* Random, Random for Beat (BPM)
+* Increase, decrease brightness
+
+
 ## Getting Started
 
 ### Prerequisites

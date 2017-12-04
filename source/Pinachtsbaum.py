@@ -295,12 +295,12 @@ class Pinachtsbaum:
         delta_step = (destination_value - source_value) / float(step_count)
 
         for n in range(1, step_count + 1):
-            yield(source_value + delta_step * n)
+            yield(min(1, source_value + delta_step * n))
             sleep(delta_time)
 
         if returns:
             for n in range(1, step_count + 1):
-                yield(destination_value - delta_step * n)
+                yield(max(0, destination_value - delta_step * n))
                 sleep(delta_time)
 
 

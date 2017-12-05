@@ -47,9 +47,10 @@ DIRECT_RUN_SUFFIX = ")"
 # This is your command central. Here you can add, delete and assign the different commands.
 # Assign the names of your commands:
 
+C_STOP_SERVER = "STOP_SERVER"
+C_BREAK_LOOP = "BREAK_LOOP"
 C_ON = "ON"
 C_OFF =  "OFF"
-C_STOP_SERVER = "STOP_SERVER"
 C_AMBIENT_GLOW = "AMBIENT_GLOW"
 C_FLUSH = "FLUSH"
 C_PING = "PING"
@@ -141,9 +142,17 @@ def ambient_glow():
     Starts Ambient Glow
     """
 
-    log("Start Ambient Glow")
+    log("Start Ambient Glow - Stop this using BREAK_LOOP")
     tree.ambient_glow(0.75, 2.0)
 
+
+def break_loop():
+    """
+    Breaks loops inside the tree.
+    """
+
+    log("Breaking Loops")
+    tree.break_loops()
 
 def on():
     """
@@ -174,6 +183,8 @@ def run_command(comm):
         # Evaluating commands
         if comm == C_STOP_SERVER:
             stop_server()
+        elif comm == C_BREAK_LOOP:
+            break_loop()
         elif comm == C_ON:
             on()
         elif comm == C_OFF:

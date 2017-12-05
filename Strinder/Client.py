@@ -12,7 +12,6 @@ import time
 import sys
 
 from Logger import *
-from Command import *
 
 
 # Client Configuration - Edit according to your settings

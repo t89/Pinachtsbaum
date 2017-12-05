@@ -11,11 +11,11 @@
 import socket
 import os
 import sys
+import inspect
 
 from threading import Thread
 from Logger import *
-from Command import *
-import inspect
+
 
 ##
 # Importing from parent directory without being a module

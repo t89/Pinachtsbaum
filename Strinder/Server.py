@@ -17,6 +17,7 @@ from threading import Thread
 from Logger import *
 
 from time import sleep
+from signal import pause
 
 
 ##
@@ -215,5 +216,4 @@ if __name__ == "__main__":
     threadServer.setDaemon(True)
     threadServer.start()
 
-    while True:
-        pass
+    pause()

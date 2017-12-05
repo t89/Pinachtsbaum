@@ -21,7 +21,7 @@ read -n 1 -s -r -p "                     Press any key to continue"
 clear
 cat ./install/install_requirements.sh
 
-printf "\nDo you want to execute this?\nAnswer with 1 or 2."
+printf "\nDo you want to execute this?\nAnswer with 1 or 2.\n"
 select yn in "Yes" "No"; do
   case $yn in
     Yes ) break;;

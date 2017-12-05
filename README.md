@@ -18,6 +18,7 @@ Get the most out of your [3D Xmas Tree](https://thepihut.com/products/3d-xmas-tr
 * Random, Random for Beat (BPM)
 * Increase, decrease brightness
 * Ambient Glow
+* Network implementation using a reworked [Strinder](https://github.com/Beulenyoshi/Strinder) implementation
 
 
 ## Getting Started
@@ -61,6 +62,33 @@ Edit with your favourite editor:
 vim xmas.py
 ```
 
+### Run via Network
+
+1. Start the server on your Raspberry:
+```bash
+sudo python Strinder/Server.py
+```
+
+2. Clone this project onto your controlling machine
+3. Open `Strinder/Client.py` and replace the host ip address with your pi's:
+```python
+HOST = "192.168.2.107"        # Insert HOST IP / name here
+```
+
+4. Now you can send commands to the server like this:
+```bash
+python Strinder/Client.py "YOUR COMMAND"
+```
+
+**Predefined Commands:**
+- STOP_SERVER - Stops Server
+* ON - Switches every LED on
+* OFF - Switches every LED off
+* FLUSH - Runs a top-down swirl, leaving the tree off
+* AMBIENT_GLOW - Starts ambient glow
+* PING - Pings a random LED for 0.2 seconds
+
+You can write your own commands! Take a look inside the `Strinder/Server.py` implementation
 
 ## Built With
 

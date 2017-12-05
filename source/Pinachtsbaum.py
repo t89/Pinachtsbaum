@@ -191,8 +191,6 @@ class Pinachtsbaum:
             for lid in led_id:
                 self.illuminate_led(lid, status, delay, auto_off)
         else:
-            if delay > 0:
-                sleep(delay) # Sleep(0) would still cause small delay
             if status:
                 self.on(led_id)
                 if auto_off > 0:
@@ -200,6 +198,9 @@ class Pinachtsbaum:
             else:
                 self.off(led_id)
                 self.__disengage_led(led_id)
+
+            if delay > 0:
+                sleep(delay) # Sleep(0) would still cause small delay
 
 
     def illuminate_all(self, status):
@@ -329,11 +330,11 @@ class Pinachtsbaum:
             for lid in led_id:
                 self.dim(lid, value, delay, duration, returns)
         else:
-            if delay > 0:
-                sleep(delay) # Sleep(0) would still cause small delay
-
             source_value = self.tree[self.led_map[led_id]].value
             self.tree[self.led_map[led_id]].source = self.__source_dim(source_value, value, duration, returns)
+
+            if delay > 0:
+                sleep(delay) # Sleep(0) would still cause small delay
 
 
     def increase_brightness(self, led_id, amount, delay):
@@ -347,12 +348,12 @@ class Pinachtsbaum:
             for lid in led_id:
                 self.increase_brightness(lid, amount, delay)
         else:
-            if delay > 0:
-                sleep(delay) # Sleep(0) would still cause small delay
-
             source_value = self.tree[self.led_map[led_id]].value
             destination_value = source_value + amount
             self.tree[self.led_map[led_id]].value = min(1.0, destination_value)
+
+            if delay > 0:
+                sleep(delay) # Sleep(0) would still cause small delay
 
 
     def decrease_brightness(self, led_id, amount, delay):
@@ -366,12 +367,12 @@ class Pinachtsbaum:
             for lid in led_id:
                 self.decrease_brightness(lid, amount, delay)
         else:
-            if delay > 0:
-                sleep(delay) # Sleep(0) would still cause small delay
-
             source_value = self.tree[self.led_map[led_id]].value
             destination_value = source_value - amount
             self.tree[self.led_map[led_id]].value = max(0.0, destination_value)
+
+            if delay > 0:
+                sleep(delay) # Sleep(0) would still cause small delay
 
 
     def ambient_glow(self, intensity, period_duration):

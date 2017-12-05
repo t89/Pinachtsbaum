@@ -25,7 +25,8 @@ sys.path.insert(0,parentdir)
 
 from source.Pinachtsbaum import Pinachtsbaum
 
-serverIsRunning = True
+is_running = True
+
 
 # Setup
 serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -34,13 +35,15 @@ PORT = 12421                    # PORT this server is listening to
 serverSocket.bind((HOST, PORT)) # Bind to the PORT
 serverSocket.listen(5)          # Await client connection.
 
+
 # Pre- / Suffix for direct commands. 
 DIRECT_RUN_PREFIX = "DR("
 DIRECT_RUN_SUFFIX = ")"
 
+##
 # This is your command central. Here you can add, delete and assign the different commands.
-
 # Assign the names of your commands:
+
 C_ON = "ON"
 C_OFF =  "OFF"
 C_STOP_SERVER = "STOP_SERVER"

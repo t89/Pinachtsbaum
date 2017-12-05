@@ -120,9 +120,8 @@ def flush():
     """
 
     log("Flush")
-    for n in range(0, 3):
-        tree.swirl(4, 4, True)
-    sleep(1)
+    tree.illuminate_led(0, True, 0, 0.2)
+    tree.swirl(0.4, 3, False)
 
 
 def ping():

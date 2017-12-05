@@ -97,7 +97,7 @@ def executeCommand(comm):
 argCount = len(sys.argv)
 if argCount > 1:                             # Arguments from commandline available
   for index in range(1,argCount):
-    command = str(sys.argv[index])
+    command = str(sys.argv[index]).upper()
     log("Sending: '" + command + "' provided as argument from commandline.")
     executeCommand(command)
 

@@ -8,9 +8,9 @@ Get the most out of your [3D Xmas Tree](https://thepihut.com/products/3d-xmas-tr
 ## Features:
 * Easy, transparent & automatic installation process
 * Mappings: Access each LED by the pcb-number, bei height, quarter & side
-* Simple On / Off
+* Simple on / off
 * Illuminate with delay, auto-off
-* Dim over time, dim from any value to any value, auto-reversable
+* Dim over time, dim from any value to any value, auto-reversible
 * Ping a random LED, fill tree in random order
 * Blinking: Interval, Speed
 * Swirl: Speed, chain length
@@ -75,3 +75,12 @@ vim xmas.py
 ## License
 
 This project is licensed under the Beerware License - see the [LICENSE](LICENSE) file for details
+
+## Support
+
+The framework and code is provided as-is, but if you need help or have suggestions, you can contact me anytime at [opensource@geeky.gent](mailto:opensource@geeky.gent?subject=Pinachtsbaum").
+
+
+## I'd like to hear from you
+
+If you come up with some neat patterns for your tree, feel free to share them with me. :)

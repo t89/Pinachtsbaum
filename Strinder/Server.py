@@ -55,7 +55,7 @@ C_AMBIENT_GLOW = "AMBIENT_GLOW"
 C_FLUSH = "FLUSH"
 C_PING = "PING"
 C_ADVENT = "ADVENT"
-
+C_ADD_RANDOM = "ADD_RANDOM"
 
 # Server monitoring
 def log_status():
@@ -147,6 +147,15 @@ def advent():
     tree.advent()
 
 
+def add_random():
+    """
+    Illuminates a random LED
+    """
+
+    log("Add Random LED")
+    tree.ping_with_token()
+
+
 def ambient_glow():
     """
     Starts Ambient Glow
@@ -213,6 +222,8 @@ def run_command(comm):
             thread.start()
         elif comm == C_PING:
             ping()
+        elif comm == C_ADD_RANDOM:
+            add_random()
         elif comm.startswith(DIRECT_RUN_PREFIX) and comm.endswith(DIRECT_RUN_SUFFIX):
             direct_run(comm[3:len(comm) - 1])
         else:

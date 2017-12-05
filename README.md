@@ -91,6 +91,7 @@ python Strinder/Client.py "YOUR COMMAND"
 * AMBIENT_GLOW - Starts ambient glow (Stop using BREAK_LOOP)
 * PING - Pings a random LED for 0.2 seconds
 * ADVENT - Illuminates one LED for each day of December (Stop using BREAK_LOOP)
+* ADD_RANDOM - Illuminate random LED until the tree is filled
 
 You can write your own commands! Take a look inside the `Strinder/Server.py` implementation
 

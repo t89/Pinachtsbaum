@@ -78,7 +78,7 @@ This project is licensed under the Beerware License - see the [LICENSE](LICENSE)
 
 ## Support
 
-The framework and code is provided as-is, but if you need help or have suggestions, you can contact me anytime at [opensource@geeky.gent](mailto:opensource@geeky.gent?subject=Pinachtsbaum").
+The framework and code is provided as-is, but if you need help or have suggestions, you can contact me anytime at [opensource@geeky.gent](mailto:opensource@geeky.gent?subject=Pinachtsbaum).
 
 
 ## I'd like to hear from you

@@ -86,7 +86,8 @@ python Strinder/Client.py "YOUR COMMAND"
 * ON - Switches every LED on
 * OFF - Switches every LED off
 * FLUSH - Runs a top-down swirl, leaving the tree off
-* AMBIENT_GLOW - Starts ambient glow
+* AMBIENT_GLOW - Starts ambient glow (Stop this using BREAK_LOOP)
+* BREAK_LOOP - Breaks loops running on background thread within the tree
 * PING - Pings a random LED for 0.2 seconds
 
 You can write your own commands! Take a look inside the `Strinder/Server.py` implementation

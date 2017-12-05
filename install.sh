@@ -8,6 +8,8 @@
 
 #!/bin/bash
 
+TERM="xterm"
+
 clear
 echo "\n          Developed by Thomas Johannesmeyer - www.geeky.gent\n"
 cat ./misc/fireplace.txt

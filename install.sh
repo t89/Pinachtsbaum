@@ -11,17 +11,17 @@
 TERM="xterm"
 
 clear
-echo "\n          Developed by Thomas Johannesmeyer - www.geeky.gent\n"
+printf "\n          Developed by Thomas Johannesmeyer - www.geeky.gent\n"
 cat ./misc/fireplace.txt
 
-echo "\n\n                      Welcome to Pinachtsbaum!"
-echo "\nYou will now be shown the contents of the install script and be asked\nif you want to continue the installation.\n\n"
+printf "\n\n                      Welcome to Pinachtsbaum!"
+printf "\nYou will now be shown the contents of the install script and be asked\nif you want to continue the installation.\n\n"
 read -n 1 -s -r -p "                     Press any key to continue"
 
 clear
 cat ./install/install_requirements.sh
 
-echo "\nDo you want to execute this?\nAnswer with 1 or 2."
+printf "\nDo you want to execute this?\nAnswer with 1 or 2."
 select yn in "Yes" "No"; do
   case $yn in
     Yes ) break;;

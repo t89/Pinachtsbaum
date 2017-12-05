@@ -9,7 +9,7 @@
 #!/bin/bash
 
 if [ "$(uname)" == "Darwin" ]; then
-  echo "Running on macOS. This script is meant to be run on Linux. Aborting."
+  printf "Running on macOS. This script is meant to be run on Linux. Aborting."
   exit
 fi
 

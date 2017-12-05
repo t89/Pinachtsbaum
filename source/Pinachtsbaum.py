@@ -334,12 +334,12 @@ class Pinachtsbaum:
             for lid in led_id:
                 self.increase_brightness(lid, amount, delay)
         else:
-                if delay > 0:
-                    sleep(delay) # Sleep(0) would still cause small delay
+            if delay > 0:
+                sleep(delay) # Sleep(0) would still cause small delay
 
-                source_value = self.tree[self.led_map[led_id]].value
-                destination_value = source_value + amount
-                self.tree[self.led_map[led_id]].value = min(1.0, destination_value)
+            source_value = self.tree[self.led_map[led_id]].value
+            destination_value = source_value + amount
+            self.tree[self.led_map[led_id]].value = min(1.0, destination_value)
 
 
     def decrease_brightness(self, led_id, amount, delay):
@@ -353,12 +353,12 @@ class Pinachtsbaum:
             for lid in led_id:
                 self.decrease_brightness(lid, amount, delay)
         else:
-                if delay > 0:
-                    sleep(delay) # Sleep(0) would still cause small delay
+            if delay > 0:
+                sleep(delay) # Sleep(0) would still cause small delay
 
-                source_value = self.tree[self.led_map[led_id]].value
-                destination_value = source_value - amount
-                self.tree[self.led_map[led_id]].value = max(0.0, destination_value)
+            source_value = self.tree[self.led_map[led_id]].value
+            destination_value = source_value - amount
+            self.tree[self.led_map[led_id]].value = max(0.0, destination_value)
 
 
     def ambient_glow(self, intensity, period_duration):

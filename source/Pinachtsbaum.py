@@ -360,3 +360,17 @@ class Pinachtsbaum:
                 destination_value = source_value - amount
                 self.tree[self.led_map[led_id]].value = max(0.0, destination_value)
 
+
+    def ambient_glow(self, intensity, period_duration):
+        """
+        Engages ambient mode with custom settings.
+        """
+
+        # Dim to solid 10% brightness as a starting glow
+        self.dim(self.all, 0.1, 0.0, 0.5, False)
+        sleep(0.6)
+
+        while True:
+            self.dim(self.all, intensity, 0.2, period_duration, True)
+            sleep(period_duration)
+

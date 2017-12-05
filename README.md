@@ -17,6 +17,7 @@ Get the most out of your [3D Xmas Tree](https://thepihut.com/products/3d-xmas-tr
 * Key press listener
 * Random, Random for Beat (BPM)
 * Increase, decrease brightness
+* Ambient Glow
 
 
 ## Getting Started

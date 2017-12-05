@@ -398,18 +398,20 @@ class Pinachtsbaum:
         Illuminates one LED for each day of december.
         """
 
-        duration = 2.0
-        intensity = 1.0
+        delta_time = 0.2    # time between LEDs in pattern
+        fade_duration = 2.0 # duration of one fade
+        intensity = 1.0     # maximum LED intensity
 
         while True:
             current_day = datetime.now().day
             offset = 1
+            duration = fade_duration * 2.0 + current_day * delta_time
 
             if current_day >= 24:
                 # add star
                 offset = 2
 
-            self.dim(range(1, current_day + offset), intensity, 0.2, duration, True)
+            self.dim(range(1, current_day + offset), intensity, delta_time, fade_duration, True)
             sleep(duration)
             if self.__should_break_loop:
                 break;

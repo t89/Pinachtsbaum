@@ -18,6 +18,7 @@ Get the most out of your [3D Xmas Tree](https://thepihut.com/products/3d-xmas-tr
 * Random, Random for Beat (BPM)
 * Increase, decrease brightness
 * Ambient Glow
+* Advent-Calendar illuminates one LED for each day of December
 * Network implementation using a reworked [Strinder](https://github.com/Beulenyoshi/Strinder) implementation
 
 
@@ -83,12 +84,13 @@ python Strinder/Client.py "YOUR COMMAND"
 **Predefined Commands:**
 
 - STOP_SERVER - Stops Server
+- BREAK_LOOP - Breaks loops running on background thread within the tree
 * ON - Switches every LED on
 * OFF - Switches every LED off
 * FLUSH - Runs a top-down swirl, leaving the tree off
-* AMBIENT_GLOW - Starts ambient glow (Stop this using BREAK_LOOP)
-* BREAK_LOOP - Breaks loops running on background thread within the tree
+* AMBIENT_GLOW - Starts ambient glow (Stop using BREAK_LOOP)
 * PING - Pings a random LED for 0.2 seconds
+* ADVENT - Illuminates one LED for each day of December (Stop using BREAK_LOOP)
 
 You can write your own commands! Take a look inside the `Strinder/Server.py` implementation
 

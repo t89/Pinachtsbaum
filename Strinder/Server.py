@@ -178,9 +178,13 @@ def run_command(comm):
         elif comm == C_OFF:
             off()
         elif comm == C_AMBIENT_GLOW:
-            ambient_glow()
+            # time consuming tasks are run threaded
+            thread = Thread(target=ambient_glow)
+            thread.start()
         elif comm == C_FLUSH:
-            flush()
+            # time consuming tasks are run threaded
+            thread = Thread(target=flush)
+            thread.start()
         elif comm == C_PING:
             ping()
         elif comm.startswith(DIRECT_RUN_PREFIX) and comm.endswith(DIRECT_RUN_SUFFIX):

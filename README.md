@@ -40,9 +40,9 @@ git clone https://github.com/Beulenyoshi/Pinachtsbaum
 
 Run the `install.sh` file:
 ```
-sh install.sh
+bash install.sh
 ```
-
+(We use `bash` instead of `sh` because we require some bash functionality)
 
 ### Run
 For a little demo execute the xmas.py file:

@@ -106,7 +106,7 @@ class Pinachtsbaum:
             tree[led_id].off()
 
 
-    def break_loop():
+    def break_loop(self):
         """
         This breaks running loop like "Ambient Glow"
         """

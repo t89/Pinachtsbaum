@@ -16,6 +16,8 @@ import inspect
 from threading import Thread
 from Logger import *
 
+from time import sleep
+
 
 ##
 # Importing from parent directory without being a module
@@ -85,6 +87,7 @@ def run_server():
             clientSocket.close()         # Closing the connection
         except socket.error, exc:
             log("Caught exception socket.error : %s" % exc)
+        sleep(0.1) # greatly frees up processing time
 
 
 def stop_server():

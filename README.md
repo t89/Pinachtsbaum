@@ -81,6 +81,7 @@ python Strinder/Client.py "YOUR COMMAND"
 ```
 
 **Predefined Commands:**
+
 - STOP_SERVER - Stops Server
 * ON - Switches every LED on
 * OFF - Switches every LED off

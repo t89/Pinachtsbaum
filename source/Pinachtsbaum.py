@@ -16,6 +16,7 @@ from threading import Timer
 import random
 from sets import Set
 
+from datetime import datetime
 
 class Pinachtsbaum:
 
@@ -289,6 +290,7 @@ class Pinachtsbaum:
         """
         Private Method. Only used by led.source to determine dim values.
         """
+
         step_count = 25
         if duration < 0.1:
             step_count = 5
@@ -383,6 +385,30 @@ class Pinachtsbaum:
         while True:
             self.dim(self.all, intensity, 0.2, period_duration, True)
             sleep(period_duration)
+            if self.__should_break_loop:
+                break;
+
+        self.__should_break_loop = False
+
+
+    def advent(self):
+        """
+        Illuminates one LED for each day of december.
+        """
+
+        duration = 2.0
+        intensity = 1.0
+
+        while True:
+            current_day = datetime.now().day
+            offset = 1
+
+            if current_day >= 24:
+                # add star
+                offset = 2
+
+            self.dim(range(1, current_day + offset), intensity, 0.2, duration, True)
+            sleep(duration)
             if self.__should_break_loop:
                 break;
 

@@ -192,6 +192,9 @@ def demo_step_brightness():
 def demo_ambient_glow():
     tree.ambient_glow(0.75, 2.0)
 
+def demo_advent():
+    tree.advent()
+
 
 # Create Pinachtsbaum Object
 tree = Pinachtsbaum()
@@ -217,9 +220,13 @@ demo_all()
 sleep(1)
 demo_patterns()
 sleep(1)
-demo_beat()
+demo_beat() # Runs forever
+sleep(1)
+demo_blinking() # Runs forever
 sleep(1)
 demo_ambient_glow() # Runs forever
+sleep(1)
+demo_advent() # Runs forever
 
 
 ##

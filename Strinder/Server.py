@@ -54,6 +54,7 @@ C_OFF =  "OFF"
 C_AMBIENT_GLOW = "AMBIENT_GLOW"
 C_FLUSH = "FLUSH"
 C_PING = "PING"
+C_ADVENT = "ADVENT"
 
 
 # Server monitoring
@@ -137,6 +138,15 @@ def ping():
     tree.ping(0.2)
 
 
+def advent():
+    """
+    Illuminates one LED for each day of December
+    """
+
+    log("Advent-Calendar - Stop this using BREAK_LOOP")
+    tree.advent()
+
+
 def ambient_glow():
     """
     Starts Ambient Glow
@@ -192,6 +202,10 @@ def run_command(comm):
         elif comm == C_AMBIENT_GLOW:
             # time consuming tasks are run threaded
             thread = Thread(target=ambient_glow)
+            thread.start()
+        elif comm == C_ADVENT:
+            # time consuming tasks are run threaded
+            thread = Thread(target=advent)
             thread.start()
         elif comm == C_FLUSH:
             # time consuming tasks are run threaded

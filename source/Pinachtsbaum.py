@@ -83,7 +83,7 @@ class Pinachtsbaum:
     engaged_leds = Set([]) # Keeps track of leds currently switched on
     tree = LEDBoard(*range(2,28),pwm=True) # Contains all LEDs
 
-    break_loops = False
+    __should_break_loop = False
 
     # Use Borg-Pattern in case multiple instances of this tree occur
     __shared_state = {}
@@ -106,12 +106,12 @@ class Pinachtsbaum:
             tree[led_id].off()
 
 
-    def break_loops():
+    def break_loop():
         """
-        This breaks running loops like "Ambient Glow"
+        This breaks running loop like "Ambient Glow"
         """
 
-        self.break_loops = True
+        self.__should_break_loop = True
 
 
     def __engage_led(self, led_id):
@@ -383,8 +383,8 @@ class Pinachtsbaum:
         while True:
             self.dim(self.all, intensity, 0.2, period_duration, True)
             sleep(period_duration)
-            if self.break_loops:
+            if self.__should_break_loop:
                 break;
 
-        self.break_loops = False
+        self.__should_break_loop = False
 

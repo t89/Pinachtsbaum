@@ -148,11 +148,11 @@ def ambient_glow():
 
 def break_loop():
     """
-    Breaks loops inside the tree.
+    Breaks loop inside the tree.
     """
 
-    log("Breaking Loops")
-    tree.break_loops()
+    log("Breaking Loop")
+    tree.break_loop()
 
 def on():
     """

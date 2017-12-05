@@ -46,7 +46,8 @@ class Pinachtsbaum:
             21: 9,
             22: 5,
             23: 21,
-            24: 20
+            24: 20,
+            25: 0
             }
 
     # Maps Sides

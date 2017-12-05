@@ -16,11 +16,13 @@ from Logger import *
 
 # Client Configuration - Edit according to your settings
 HOST = "192.168.2.107"        # Insert HOST IP / name here
-HOST = "127.0.0.1"        # Insert HOST IP / name here
 PORT = 12421                   # PORT this client is communicating on
-
 DELAY = 2                      # DELAY between retries in seconds
 MAX_ATTEMPT_COUNT = 5            # Max number of attempts
+##
+# Use this for debugging
+#  HOST = "127.0.0.1"        # Insert HOST IP / name here
+
 # Configuration End
 
 
@@ -73,23 +75,23 @@ def executeCommand(comm):
     Will retry if message has not been delivered successfully.
     """
 
-    currentAttemptCount = 0                   # Resetting for each command
+    current_attempt_count = 0                   # Resetting for each command
     successful = send(comm)                   # Attempts to send message and saves result
 
     if successful:                            # Message has been sent successfully
         log("Message sent successfully.\n\n")
     else:                                     # Some error appeared while sending the message
-        lastTryTime = time.time()             # Save timestamp
+        last_try_time = time.time()             # Save timestamp
 
-        while ((successful == False) and (currentAttemptCount < MAX_ATTEMPT_COUNT)):
+        while ((successful == False) and (current_attempt_count < MAX_ATTEMPT_COUNT)):
         # Still unsuccessful and within maximum attempt threshold
-            timeDelta = time.time() - lastTryTime # Calculate time delta between now and last attempt
+            delta_time = time.time() - last_try_time # Calculate time delta between now and last attempt
 
-            if timeDelta >= delay:                # time delta between now and last try is >= timeout
-                log("Could not send message. Retry: " + str(currentAttemptCount) + "/" + str(MAX_ATTEMPT_COUNT))
-                lastTryTime = time.time()         # set last try timestamp to now
+            if delta_time >= DELAY:                # time delta between now and last try is >= timeout
+                log("Could not send message. Retry: " + str(current_attempt_count) + "/" + str(MAX_ATTEMPT_COUNT))
+                last_try_time = time.time()         # set last try timestamp to now
                 successful = send(comm)           # retry sending -> Saving success-flag
-                currentAttemptCount += 1          # increase attempt count
+                current_attempt_count += 1          # increase attempt count
 
 
 argCount = len(sys.argv)

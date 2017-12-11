@@ -7,7 +7,7 @@ Get the most out of your [3D Xmas Tree](https://thepihut.com/products/3d-xmas-tr
 
 ## Features:
 * Easy, transparent & automatic installation process
-* Mappings: Access each LED by the pcb-number, bei height, quarter & side
+* Mappings: Access each LED by the pcb-number, by height, quarter & side
 * Simple on / off
 * Illuminate with delay, auto-off
 * Dim over time, dim from any value to any value, auto-reversible

@@ -1,5 +1,7 @@
 # Pinachtsbaum
 
+![Pinachtsbaum Icon](./misc/Icon.png "Pinachtsbaum-Icon")
+
 Get the most out of your [3D Xmas Tree](https://thepihut.com/products/3d-xmas-tree-for-raspberry-pi).
 
 ![3D Xmas Tree](https://cdn.shopify.com/s/files/1/0176/3274/products/IMG_0673_1024x1024.JPG?v=1510937356 "Xmas Trees")
@@ -19,7 +21,7 @@ Get the most out of your [3D Xmas Tree](https://thepihut.com/products/3d-xmas-tr
 * Increase, decrease brightness
 * Ambient Glow
 * Advent-Calendar illuminates one LED for each day of December
-* Network implementation using a reworked [Strinder](https://github.com/Beulenyoshi/Strinder) implementation
+* Network access using a reworked [Strinder](https://github.com/Beulenyoshi/Strinder) implementation
 
 
 ## Getting Started

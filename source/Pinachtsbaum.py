@@ -403,7 +403,7 @@ class Pinachtsbaum:
         intensity = 1.0     # maximum LED intensity
 
         while True:
-            current_day = datetime.now().day
+            current_day = max(datetime.now().day, 24)
             offset = 1
             duration = fade_duration * 2.0 + current_day * delta_time
 

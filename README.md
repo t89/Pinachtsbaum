@@ -34,34 +34,34 @@ This repository will provide everything you need to run neat looking effects on 
 ### Installing
 Depending on the system installed on your Raspberry Pi, it may not have `git` preinstalled. We start by assuring that `git` is available:
 
-```
+```bash
 sudo apt-get install git
 ```
 
 Now we clone this project:
-```
+```bash
 git clone https://github.com/Beulenyoshi/Pinachtsbaum
 ```
 
 Run the `install.sh` file:
-```
+```bash
 bash install.sh
 ```
 (We use `bash` instead of `sh` because we require some bash functionality)
 
 ### Run
 For a little demo execute the xmas.py file:
-```
+```bash
 python xmas.py
 ```
 
 (You may have to run this as root for GPIO access):
-```
+```bash
 sudo python xmas.py
 ```
 
 Edit with your favourite editor:
-```
+```bash
 vim xmas.py
 ```
 

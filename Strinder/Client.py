@@ -15,7 +15,8 @@ from Logger import *
 
 
 # Client Configuration - Edit according to your settings
-HOST = "192.168.2.107"        # Insert HOST IP / name here
+#  HOST = "192.168.2.114"        # Insert HOST IP / name here
+HOST = "127.0.0.1"        # Insert HOST IP / name here
 PORT = 12421                   # PORT this client is communicating on
 DELAY = 2                      # DELAY between retries in seconds
 MAX_ATTEMPT_COUNT = 5            # Max number of attempts

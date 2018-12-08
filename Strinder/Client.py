@@ -46,7 +46,7 @@ def send(msg):
         clientSocket.connect((HOST, PORT))
         response = clientSocket.recv(1024)
         log(response)
-    except socket.error, exc:
+    except socket.error as exc:
         log("Caught exception socket.error : %s" % exc)
         successful = False
 
@@ -55,7 +55,7 @@ def send(msg):
     try:
         log("Trying to send message: " + msg + " to " + HOST + ":" + str(PORT))
         clientSocket.send(msg)
-    except socket.error, exc:
+    except socket.error as exc:
         log("Caught exception socket.error : %s" % exc)
         successful = False
 
@@ -63,7 +63,7 @@ def send(msg):
     try:
         log("Closing connection.\n")
         clientSocket.close()                     # Close the socket when done
-    except socket.error, exc:
+    except socket.error as exc:
         log("Caught exception socket.error : %s" % exc)
         successful = False
 

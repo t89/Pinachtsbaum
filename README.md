@@ -21,7 +21,7 @@ Get the most out of your [3D Xmas Tree](https://thepihut.com/products/3d-xmas-tr
 * Increase, decrease brightness
 * Ambient Glow
 * Advent-Calendar illuminates one LED for each day of December
-* Network access using a reworked [Strinder](https://github.com/Beulenyoshi/Strinder) implementation
+* Network access using a reworked [Strinder](https://github.com/t89/Strinder) implementation
 
 
 ## Getting Started
